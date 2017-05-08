@@ -3,6 +3,7 @@ package com.demo.index.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -16,8 +17,8 @@ public class IndexController {
     private static final Logger LOG = LoggerFactory.getLogger(IndexController.class);
 
     @RequestMapping("/index")
-    public String index(){
-        //model.addAttribute("message", "hello,Index");
+    public String index(Model model){
+        model.addAttribute("message", "welcome to Index!");
         return "index";
     }
 
